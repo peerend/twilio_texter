@@ -1,0 +1,10 @@
+<%= form_for @message do |f| %>
+  <%=f.label :from %>
+  <%= collection_select(:message, :from, Contact.all, :phone, :name, twil: true) %>
+  <%=f.label :to %>
+  <%#=f.text_field :from %>
+  <%= collection_select(:message, :to, Contact.all, :phone, :name, {include_blank: true}) %>
+  <%=f.label :body %>
+  <%=f.text_field :body %>
+  <%=f.submit%>
+<% end %>

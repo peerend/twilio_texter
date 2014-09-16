@@ -1,0 +1,9 @@
+<%= form_for @contact do |f| %>
+  <%=f.label :name %>
+  <%=f.text_field :name %><br>
+  <%=f.label :phone %>
+  <%=f.number_field :phone %><br>
+  <%=f.label :twil, "Twilio Account?" %>
+  <%=f.select :twil, [['True','true'],['False','false']] %><br>
+  <%=f.submit%>
+<% end %>
